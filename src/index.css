@@ -1,13 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add any custom base styles here */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: 'Inter', sans-serif;
+    @apply bg-gray-50 text-gray-800;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Replicate custom classes from your original HTML file */
+.mode-button-active {
+    @apply bg-blue-600 text-white shadow-md;
+}
+.mode-button-inactive {
+    @apply bg-gray-200 text-gray-700;
+}
+.tab-button-active {
+    @apply border-b-2 border-blue-600 text-blue-600 font-semibold;
+}
+.tab-button-inactive {
+    @apply border-b-2 border-transparent text-gray-500;
+}
+.form-input {
+    @apply w-full p-2.5 rounded-lg border border-gray-300 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+.btn-primary {
+    @apply bg-blue-600 text-white py-3 px-5 rounded-lg font-semibold text-center transition-colors duration-300 w-full cursor-pointer hover:bg-blue-700 flex items-center justify-center;
+}
+.btn-secondary {
+    @apply bg-gray-600 text-white py-2.5 px-4 rounded-lg font-medium text-center transition-colors duration-300 cursor-pointer hover:bg-gray-700;
+}
+.disclaimer {
+    @apply bg-yellow-50 border-l-4 border-yellow-400 p-4 mt-8 text-sm text-yellow-800;
 }
