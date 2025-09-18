@@ -24,7 +24,7 @@ import { jsPDF } from 'jspdf';
 
 // --- IMPORTANT: PASTE YOUR FIREBASE CONFIGURATION HERE ---
 const firebaseConfig = {
-   apiKey: "AIzaSyAgYoEBztR2xJM-uQp53WhOJZDiif-BkDs",
+ apiKey: "AIzaSyAgYoEBztR2xJM-uQp53WhOJZDiif-BkDs",
   authDomain: "cardio-predict-ai.firebaseapp.com",
   projectId: "cardio-predict-ai",
   storageBucket: "cardio-predict-ai.firebasestorage.app",
@@ -320,8 +320,63 @@ const PatientPredictionResultModal = ({ result, onClose }) => {
 
     const generatePatientPDF = () => {
        const doc = new jsPDF();
-       doc.text("Cardio-AI Health Summary", 10, 10);
-       // ... Add more details to PDF
+       let yPos = 20;
+
+       doc.setFont('helvetica', 'bold');
+       doc.setFontSize(22);
+       doc.text("Cardio-AI Predict Health Summary", 105, yPos, { align: 'center' });
+       yPos += 15;
+       
+       doc.setFontSize(12);
+       doc.setFont('helvetica', 'normal');
+       doc.text(`Date: ${new Date().toLocaleDateString()}`, 20, yPos);
+       yPos += 5;
+       
+       doc.setLineWidth(0.5);
+       doc.line(20, yPos, 190, yPos);
+       yPos += 10;
+
+       doc.setFontSize(16);
+       doc.setFont('helvetica', 'bold');
+       doc.text("Your Assessment Result", 20, yPos);
+       yPos += 10;
+       
+       doc.setFontSize(12);
+       doc.setFont('helvetica', 'normal');
+       doc.text(`Estimated Risk Percentage:`, 20, yPos);
+       doc.setFont('helvetica', 'bold');
+       doc.text(`${percentage}% (${riskLevel})`, 80, yPos);
+       yPos += 15;
+       
+       doc.setFontSize(16); doc.setFont('helvetica', 'bold');
+       doc.text("Your Health Metrics", 20, yPos);
+       yPos += 8;
+       doc.setFontSize(11); doc.setFont('helvetica', 'normal');
+       doc.text(`- Age: ${data.age}`, 25, yPos); yPos += 6;
+       doc.text(`- Body Mass Index (BMI): ${data.bmi}`, 25, yPos); yPos += 6;
+       doc.text(`- Systolic Blood Pressure: ${data.bp} mmHg`, 25, yPos); yPos += 6;
+       doc.text(`- Resting Heart Rate: ${data.hr} bpm`, 25, yPos); yPos += 10;
+
+       doc.setFontSize(16);
+       doc.setFont('helvetica', 'bold');
+       doc.text("Personalized Recommendations", 20, yPos);
+       yPos += 8;
+       
+       doc.setFont('helvetica', 'normal');
+       doc.setFontSize(12);
+       const splitAdvice = doc.splitTextToSize(advice, 170);
+       doc.text(splitAdvice, 20, yPos);
+       yPos += (splitAdvice.length * 5) + 5;
+       
+       if (specificAdvice.length > 0) {
+           specificAdvice.forEach(item => {
+               const splitItem = doc.splitTextToSize(item, 160);
+               doc.text(`•`, 25, yPos);
+               doc.text(splitItem, 30, yPos);
+               yPos += (splitItem.length * 5) + 2;
+           });
+       }
+       
        doc.save("Cardio-AI-Health-Summary.pdf");
     };
 
