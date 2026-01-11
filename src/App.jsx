@@ -24,13 +24,13 @@ import { jsPDF } from 'jspdf';
 
 // --- IMPORTANT: PASTE YOUR FIREBASE CONFIGURATION HERE ---
 const firebaseConfig = {
- apiKey: "AIzaSyAgYoEBztR2xJM-uQp53WhOJZDiif-BkDs",
-  authDomain: "cardio-predict-ai.firebaseapp.com",
-  projectId: "cardio-predict-ai",
-  storageBucket: "cardio-predict-ai.firebasestorage.app",
-  messagingSenderId: "496971831989",
-  appId: "1:496971831989:web:f002a6929984e87bc0fcfc",
-  measurementId: "G-Z62Q08BD7E"
+  apiKey: "AIzaSyCqTW3g63EhY7RzHb-TP83dkW5zGKEGEsk",
+  authDomain: "cardio-predict-966b4.firebaseapp.com",
+  projectId: "cardio-predict-966b4",
+  storageBucket: "cardio-predict-966b4.firebasestorage.app",
+  messagingSenderId: "325590029622",
+  appId: "1:325590029622:web:e1147029ae7f0743304f97",
+  measurementId: "G-XF37THL175"
 };
 
 // --- Firebase Initialization ---
