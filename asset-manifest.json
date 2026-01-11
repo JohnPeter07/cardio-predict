@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/JohnPeter07/cardio-predict.git/static/css/main.01ab4eb8.css",
+    "main.js": "/JohnPeter07/cardio-predict.git/static/js/main.fff2b52d.js",
+    "static/js/239.20b7a35e.chunk.js": "/JohnPeter07/cardio-predict.git/static/js/239.20b7a35e.chunk.js",
+    "static/js/213.34131fba.chunk.js": "/JohnPeter07/cardio-predict.git/static/js/213.34131fba.chunk.js",
+    "static/js/455.592a6968.chunk.js": "/JohnPeter07/cardio-predict.git/static/js/455.592a6968.chunk.js",
+    "static/js/453.1fab3b41.chunk.js": "/JohnPeter07/cardio-predict.git/static/js/453.1fab3b41.chunk.js",
+    "index.html": "/JohnPeter07/cardio-predict.git/index.html",
+    "main.01ab4eb8.css.map": "/JohnPeter07/cardio-predict.git/static/css/main.01ab4eb8.css.map",
+    "main.fff2b52d.js.map": "/JohnPeter07/cardio-predict.git/static/js/main.fff2b52d.js.map",
+    "239.20b7a35e.chunk.js.map": "/JohnPeter07/cardio-predict.git/static/js/239.20b7a35e.chunk.js.map",
+    "213.34131fba.chunk.js.map": "/JohnPeter07/cardio-predict.git/static/js/213.34131fba.chunk.js.map",
+    "455.592a6968.chunk.js.map": "/JohnPeter07/cardio-predict.git/static/js/455.592a6968.chunk.js.map",
+    "453.1fab3b41.chunk.js.map": "/JohnPeter07/cardio-predict.git/static/js/453.1fab3b41.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.01ab4eb8.css",
+    "static/js/main.fff2b52d.js"
+  ]
+}
